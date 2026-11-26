@@ -2,38 +2,40 @@ import { useState, forwardRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Sparkles, ChevronRight, X, ZoomIn } from 'lucide-react';
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const memories = [
   {
     id: 1,
-    image: '/photos/photo1.jpg',
+    image: `${baseUrl}photos/photo1.jpg`,
     title: 'That Radiant Glow ✨',
     tag: 'Prettiest Eyes',
     caption: 'That captivating glance that makes my heart skip a beat every time.',
   },
   {
     id: 2,
-    image: '/photos/photo2.jpg',
+    image: `${baseUrl}photos/photo2.jpg`,
     title: 'My Gorgeous Doll 💖',
     tag: 'Sweetest Smile',
     caption: 'With that lovely ruby sparkle and soft curls, pure magic in a frame.',
   },
   {
     id: 3,
-    image: '/photos/photo3.jpg',
+    image: `${baseUrl}photos/photo3.jpg`,
     title: 'You & Me, Always 👩‍❤️‍👨',
     tag: 'Us Together',
     caption: 'Right here wrapped in your warmth is my favorite place in the universe.',
   },
   {
     id: 4,
-    image: '/photos/photo4.jpg',
+    image: `${baseUrl}photos/photo4.jpg`,
     title: 'That Shy Little Tilt 🌸',
     tag: 'Sunshine',
     caption: 'That gentle head tilt and sweet smile that turns any day into pure joy.',
   },
   {
     id: 5,
-    image: '/photos/photo5.jpg',
+    image: `${baseUrl}photos/photo5.jpg`,
     tag: 'Effortlessly Cute',
     title: 'Natural & Pure 💫',
     caption: 'Effortlessly adorable, sweet, and genuine. My favourite view forever.',

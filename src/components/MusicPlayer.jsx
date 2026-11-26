@@ -6,9 +6,10 @@ export default function MusicPlayer({ isPlaying, onToggle }) {
   const audioRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(true);
   const [showTooltip, setShowTooltip] = useState(false);
+  const baseUrl = import.meta.env.BASE_URL;
 
   useEffect(() => {
-    const audio = new Audio('/music/background.mp3');
+    const audio = new Audio(`${baseUrl}music/background.mp3`);
     audio.loop = true;
     audio.volume = 0.6;
     audioRef.current = audio;
@@ -17,7 +18,7 @@ export default function MusicPlayer({ isPlaying, onToggle }) {
     const handleError = () => {
       // Fallback to /audio/song.mp3
       if (audio.src.includes('background.mp3')) {
-        audio.src = '/audio/song.mp3';
+        audio.src = `${baseUrl}audio/song.mp3`;
       }
     };
 
